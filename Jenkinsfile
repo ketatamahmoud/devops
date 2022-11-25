@@ -1,7 +1,6 @@
 pipeline{
   agent any
   tools {
-    echo "incrementing version"
     maven 'Maven'
   }
   stages{
