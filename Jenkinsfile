@@ -31,10 +31,10 @@ pipeline{
       steps{
         script{
           echo "building the image"
-          withCredentials([usernamePassword(credentialsId :'docker_hub', passwordVariable: 'pass', usernameVariable:'user')]){
-            sh "docker build -t gaston2000/maven-app:javamavenApp:${IMAGE_NAME} ."
+          withCredentials([usernamePassword(credentialsId :'docker_hub', passwordVariable: 'Mk280416**', usernameVariable:'mahmoudketata')]){
+            sh "docker build -t mahmoudketata/maven-app:javamavenApp:${IMAGE_NAME} ."
             sh "echo $pass | docker login -u $user --password-stdin" 
-            sh "docker push gaston2000/maven-app:javamavenApp:${IMAGE_NAME}"
+            sh "docker push mahmoudketata/maven-app:javamavenApp:${IMAGE_NAME}"
             
           }
       }
